@@ -1,0 +1,317 @@
+html { 
+  box-sizing: border-box;
+  background-color: #FAEDE8;
+}
+
+body {
+  margin: auto;
+  padding: 40px 0px;
+  color: rgba(81, 81, 81, 1);
+  font-family: PP-Editorial-New-UltraLight;
+}
+
+@font-face {
+  font-family: PP-Editorial-New-UltraLight;
+  src: url("fonts/PPEditorialNew-Ultralight.woff2") format("woff2"),
+  url("fonts/PPEditorialNew-Ultralight.woff") format("woff");
+}
+
+@font-face {
+  font-family: PP-Editorial-New-UltralightItalic;
+  src: url("fonts/PPEditorialNew-UltralightItalic.woff2") format("woff2"),
+  url("fonts/PPEditorialNew-UltralightItalic.woff") format("woff");
+}
+
+#menu {
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  font-size: 35px;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  font-family: PP-Editorial-New-Ultralight;
+  color: rgba(81, 81, 81, 1);
+}
+
+#menu:hover {
+  color: rgba(191, 163, 163, 1);
+}
+
+#menu-mobile:hover {
+  color: rgba(191, 163, 163, 1);
+}
+
+.myBtn {
+  transition: 0.2s ease-in-out;
+}
+
+#menu-mobile {
+  font-size: 60px;
+  position: fixed;
+  right: 10px;
+  top: 0px;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  font-family: PP-Editorial-New-Ultralight;
+  color: rgba(81, 81, 81, 1);
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+  border: 10px solid;
+  font-size: 20px;
+  background-color: #FAEDE8;
+  margin: auto;
+  padding: 30px 40px;
+  border: 1px solid #888;
+  width: 50%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@-webkit-keyframes slideIn {
+  from {bottom: 500px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: 500px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+#palette, #quilt {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  cursor: move;
+}
+
+#quilt {
+  border: 1px solid rgba(191, 163, 163, 1);
+}
+
+#palette {
+  padding-top: 20%;
+  padding-bottom: 10%;
+  margin-bottom: 20px;
+}
+
+.draggable {
+  transition: width 0.2s ease-in;
+}
+
+@media screen and (min-width: 861px) {
+  .draggable {
+    width: 125px;
+    height: 125px;
+  }
+
+  .mainContent {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .draggable {
+    width: 100px;
+    height: 100px;
+  }
+
+  .mainContent {
+    width: 100px;
+    height: 100px;
+  }
+
+  table {
+    margin-top: 7%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .draggable {
+    width: 80px;
+    height: 80px;
+  }
+
+  .mainContent {
+    width: 80px;
+    height: 80px;
+  }
+
+  table {
+    margin-top: 7%;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  #menu {
+    display: block !important;
+  }
+
+  #menu-mobile {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #menu-mobile {
+    display: block !important;
+  }
+
+  #menu {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .draggable {
+    width: 60px;
+    height: 60px;
+  }
+
+  .mainContent {
+    width: 60px;
+    height: 60px;
+  }
+
+  table {
+    margin-top: 7%;
+  }
+
+}
+
+table {
+  transition: margin 0.3s ease-in;
+}
+table, tr, td {
+  cellpadding="0";
+  cellspacing="0";
+  border="0";
+  border-collapse: collapse;
+}
+
+.droppable {
+  padding: 0; 
+  margin: 0;
+  background: rgba(0,0,0,0.1);
+  vertical-align: middle;
+}
+
+#div1 {
+   background-image: url("tiles-08.svg");
+   background-repeat: no-repeat;
+}
+
+#div2 {
+   background-image: url("tiles-09.svg");
+   background-repeat: no-repeat;
+}
+
+#div3 {
+   background-image: url("tiles-10.svg");
+   background-repeat: no-repeat;
+}
+
+#div4 {
+   background-image: url("tiles-11.svg");
+   background-repeat: no-repeat;
+}
+
+#div5 {
+   background-image: url("tiles-12.svg");
+   background-repeat: no-repeat;
+}
+
+#div6 {
+   background-image: url("tiles-13.svg");
+   background-repeat: no-repeat;
+}
+
+#div7 {
+   background-image: url("tiles-14.svg");
+   background-repeat: no-repeat;
+}
+
+#div8 {
+   background-image: url("tiles-15.svg");
+   background-repeat: no-repeat;
+}
+
+#div9 {
+   background-image: url("tiles-16.svg");
+   background-repeat: no-repeat;
+}
+
+#div10 {
+   background-image: url("tiles-17.svg");
+   background-repeat: no-repeat;
+}
+
+#div11 {
+   background-image: url("tiles-18.svg");
+   background-repeat: no-repeat;
+}
+
+#div12 {
+   background-image: url("tiles-19.svg");
+   background-repeat: no-repeat;
+}
+
+.placeholder {
+  background-color: #FAEDE8;
+}
