@@ -7,7 +7,6 @@
 
     <link rel="stylesheet" href="assets/style.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 
@@ -37,7 +36,7 @@
 </div>
 
 <div class = "intro">
-  <h2><i>Souvenirs</i>: French for <i>memories</i></h2>
+  <h2><i>Souvenirs </i>: French for <i>memories</i></h2>
 </div>
 
 <div class="info">
@@ -52,7 +51,7 @@
 
 <div class="slidecontainer">
       <input type="range" min="1" max="5" step="1" class="slider" id="homes">
-      <datalist id="steplist">
+      <datalist class="steplist">
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -64,7 +63,7 @@
 <p>2. The places where you have lived or were raised are important to your identity.</p>
   <div class="slidecontainer">
       <input type="range" min="1" max="5" class="slider" step="1" id="places">
-      <datalist id="steplist">
+      <datalist class="steplist">
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -77,12 +76,12 @@
 
 <div class = "slidecontainer">
     <div class = "wrapper">
-      <div class = "col-1">
+      <div class = "col">
         <input type="range" min="0" max="255" id="r" step="1" value="0" class="colorslider">
         <input type="range" min="0" max="255" id="g" step="1" value="0" class="colorslider">
         <input type="range" min="0" max="255" id="b" step="1" value="0" class="colorslider">
       </div>
-  <div class="col-2">
+  <div class="col">
       <div id="swatch"></div>
   </div>
   </div>
@@ -91,7 +90,7 @@
  <p>4. I keep objects or items because they remind me of an important memory or person in my life.</p>
     <div class="slidecontainer">
       <input type="range" min="1" max="5" class="slider" step="1" id="dreams">
-      <datalist id="steplist">
+      <datalist class="steplist">
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -103,7 +102,7 @@
 <p>5. How important are your dreams and imagination to who you are?</p>
     <div class="slidecontainer">
       <input type="range" min="1" max="5" class="slider" step="1" id="dreams">
-      <datalist id="steplist">
+      <datalist class="steplist">
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -115,7 +114,7 @@
 <p>6. How important is your faith or religion to your identity?</p>
     <div class="slidecontainer">
       <input type="range" min="1" max="5" class="slider" step="1" id="faith">
-      <datalist id="steplist">
+      <datalist class="steplist">
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -127,13 +126,13 @@
   <p>7. What's your favorite season?</p>
     <div class="slidecontainer">
       <div class = "seasons" id="favoriteseason">
-      <input type="checkbox">
+      <input type="checkbox" id="spring">
       <label for="spring">Spring</label>
-      <input type="checkbox">
+      <input type="checkbox" id="summer">
       <label for="summer">Summer</label>
-      <input type="checkbox">
+      <input type="checkbox" id="fall">
       <label for="fall">Fall</label>
-      <input type="checkbox">
+      <input type="checkbox" id="winter">
       <label for="winter">Winter</label>
     </div>
     </div>
@@ -141,7 +140,7 @@
   <p>8. My belonging to a community is an important part of who I am.</p>
     <div class="slidecontainer">
       <input type="range" min="1" max="5" class="slider" step="1" id="music">
-      <datalist id="steplist">
+      <datalist class="steplist">
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -153,7 +152,7 @@
   <p>9. I associate significant moments in my life with meaningful songs or musical artists.</p>
     <div class="slidecontainer">
       <input type="range" min="1" max="5" class="slider" step="1" id="music">
-      <datalist id="steplist">
+      <datalist class="steplist">
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -165,7 +164,7 @@
     <p>10. Playing or watching sports is an important part of my identity.</p>
     <div class="slidecontainer">
       <input type="range" min="1" max="5" class="slider" step="1" id="sports">
-      <datalist id="steplist">
+      <datalist class="steplist">
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -177,7 +176,7 @@
     <p>11. Meals gathered around the table with family have been a formative part of my life.</p>
     <div class="slidecontainer">
       <input type="range" min="1" max="5" class="slider" step="1" id="sports">
-      <datalist id="steplist">
+      <datalist class="steplist">
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -190,6 +189,7 @@
 
 </div>
 
+<section>
 <table id="palette">
   
   <tr>
@@ -252,6 +252,8 @@
   </tr>
 
 </table>
+
+</section>
 
 </div>
   <script src="assets/main.js"></script>
