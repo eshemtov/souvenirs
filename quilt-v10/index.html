@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="jquery.ui.touch-punch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+
+  </head>
+
+<body>
+
+<div class = "container">
+  <div class = "header">
+    <h1>SOUVENIRS</h1>
+    <img class = "header-leaf" src="assets/illustration-90.svg" alt="mint leaf illustration"> 
+    <img class = "header-cloud" src="assets/illustration-1-91.svg" alt="cloud illustration">
+    <img class = "header-triangles" src="assets/illustration-93.svg" alt="triangles illustration">
+    <img class = "header-star" src="assets/illustration-1-92.svg" alt="star illustration">
+
+
+  </div>
+
+      <button class="myBtn" id="menu">about</button>
+      <button class="myBtn" id="menu-mobile">&plus;</button>
+
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Memory is like a patchwork of moments, a collection or mosaic of fragments from the past that inform our identity and make up our lives. The title of this project, <i>Souvenirs</i>, means <i>memories</i> in French, my second native language with English and one part of my cultural identity.</p>
+
+    <p>Inspired by the tradition of quiltmaking and its relationship to culture and heritage, this website is a reflection on memory and identity, thinking about our relationships with places and community, music and faith, as well as keepsakes, sports, and food. </p>
+
+    <p>Through this website you can complete a brief form with broad questions about yourself and once you click submit, you will receive a curated selection of quilt squares specifically based on your responses. Then, you’ll be able to drag these pieces to create your own unique digital quilt, representative of your identity, that you can save and keep.</p>
+      <br>
+    <p>Created by <a href="https://eleanorshemtov.com/" target="_blank">Eleanor Shemtov</a> for the Design Senior Seminar final project at the University of Pennsylvania, Spring 2022.</p>
+    <span>Special thank you for coding help and advice to Janna Goliff.</span>
+  </div>
+</div>
+
+<div class = "intro">
+  <h2><i>Souvenirs </i>: French for <i>memories</i></h2>
+</div>
+
+<div class="info">
+  <p>Memory is like a patchwork of moments, a collection or mosaic of fragments from the past that inform our identity. Inspired by the tradition of quiltmaking and its relationship to culture and heritage, this website is meant to serve as a reflection on memory and identity.</p>
+
+  <p>Answer the brief questions below about different facets of identity with the scale for questions ranging from 1 (Not important to my sense of who I am) to 5 (Very important to my sense of who I am). </p> 
+
+  <p>After submitting, you'll receive a curated selection of quilt squares based on your responses, just scroll to the bottom of the page where you’ll be able to drag these squares to create your own unique digital quilt.</p>
+</div>
+
+<div id="form">
+
+<p>1. How many places do you call home?</p>
+
+<div class="slidecontainer">
+      <input type="range" min="1" max="5" step="1" class="slider" id="homes">
+      <datalist class="steplist">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5+</option>
+      </datalist>
+</div>
+
+<p>2. The places where you have lived or were raised are important to your identity.</p>
+  <div class="slidecontainer">
+      <input type="range" min="1" max="5" class="slider" step="1" id="places">
+      <datalist class="steplist">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </datalist>
+  </div>
+
+  <p>3. What color do you associate with home?</p>
+
+<div class = "slidecontainer">
+    <div class = "wrapper">
+      <div class = "col">
+        <input type="range" min="0" max="255" id="r" step="1" value="0" class="colorslider">
+        <input type="range" min="0" max="255" id="g" step="1" value="0" class="colorslider">
+        <input type="range" min="0" max="255" id="b" step="1" value="0" class="colorslider">
+      </div>
+  <div class="col">
+      <div id="swatch"></div>
+  </div>
+  </div>
+</div>  
+
+ <p>4. I keep objects or items because they remind me of an important memory or person in my life.</p>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="5" class="slider" step="1" id="objects">
+      <datalist class="steplist">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </datalist>
+    </div>
+
+<p>5. How important are your dreams and imagination to who you are?</p>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="5" class="slider" step="1" id="dreams">
+      <datalist class="steplist">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </datalist>
+    </div>
+
+<p>6. How important is your faith or religion to your identity?</p>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="5" class="slider" step="1" id="faith">
+      <datalist class="steplist">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </datalist>
+    </div>
+
+  <p>7. What's your favorite season?</p>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="4" class="slider" step="1" value="1" id="seasons">
+      <datalist class="steplist">
+        <option>Spring</option>
+        <option>Summer</option>
+        <option>Fall</option>
+        <option>Winter</option>
+      </datalist>
+  </div>
+
+    <p>8. Meals gathered around the table with family have been a formative part of my life.</p>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="5" class="slider" step="1" id="food">
+      <datalist class="steplist">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </datalist>
+    </div>
+
+  <p>9. My belonging to a community is an important part of who I am.</p>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="5" class="slider" step="1" id="community">
+      <datalist class="steplist">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </datalist>
+  </div>
+
+  <p>10. My language and/or nationality or multiple nationalities are important to my sense of self.</p>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="5" class="slider" step="1" id="lang-nation">
+      <datalist class="steplist">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </datalist>
+  </div>
+
+  <p>11. Playing or watching sports is an important part of my identity.</p>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="5" class="slider" step="1" id="sports">
+      <datalist class="steplist">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </datalist>
+    </div>
+
+  <div class = "arrow">
+  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+  <style type="text/css">
+    .st0{fill:none;stroke:#515151;stroke-linecap:round;stroke-miterlimit:10;}
+    .st1{fill:#515151;}
+  </style>
+  <g>
+    <g>
+      <path class="st0" d="M19.39,32.72c13.78-5.56,26.85-4.36,32.44,2.72c2.95,3.73,5.42,11.1,2.42,15.72c-0.23,0.35-2.67,4-6.21,3.62
+        c-1.93-0.21-3.84-1.57-4.53-3.49c-1.04-2.87,1.12-5.65,1.6-6.28c3.49-4.49,10.97-4.62,14.58-3.91
+        c9.22,1.83,16.52,13.79,18.59,29.86"/>
+      <g>
+        <polygon class="st1" points="76.25,69.27 78.19,70.68 79.6,68.74 79.82,70.16 78.42,72.1 76.48,70.69      "/>
+      </g>
+    </g>
+  </g>
+  </svg>
+</div>
+
+  <p>12. I associate significant moments in my life with meaningful songs or musical artists.</p>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="5" class="slider" step="1" id="music">
+      <datalist class="steplist">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </datalist>
+    </div>
+
+  <button type="submit" onclick="saveData();setColor();">Submit</button>
+  
+</div>
+
+<div id="instructions">
+  <h3>How to</h3>
+
+  <div class = "wrapper-1">
+    <div class = "col">
+      <div class = "info">
+        <p>Drag the quilt squares into the grey area to start building your own unique digital quilt. You can click the refresh button if you would like to see a new selection of randomized squares based on your answers that you can choose from. Once you've dragged a square into the grey area, you can click on a square to delete it and press the save button once you're ready to download your quilt as an image!</p>
+      </div>
+    </div>
+  <div class = "col-1">
+    <button onclick="saveData()" class="refresh">
+      <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.14 42.4" width="25" height="25"><defs><style>.cls-1{fill:none;}.cls-2{fill:none;stroke:#515151;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px;}.cls-3{fill:#515151;}</style></defs><path class="cls-1" d="M37.13,31.24A18.85,18.85,0,1,1,38.8,14.5"/><path class="cls-2" d="M37.13,31.24A18.85,18.85,0,1,1,35,8.39"/><polygon class="cls-3" points="29.86 10.06 38.8 14.5 38.17 4.54 29.86 10.06"/></svg>
+    </button>
+    <button onclick="downloadimage()" class="savequilt">Save your quilt</button>
+  </div>
+</div>
+</div>
+
+<section>
+<table id="palette">
+  
+  <tr>
+    <td><div class="draggable"><div class="mainContent" id="div0"></div></div></td>
+    <td><div class="draggable"><div class="mainContent" id="div1"></div></div></td>
+    <td><div class="draggable"><div class="mainContent" id="div2"></div></div></td>
+    <td><div class="draggable"><div class="mainContent" id="div3"></div></div></td>
+    <td><div class="draggable"><div class="mainContent" id="div4"></div></div></td>
+    <td><div class="draggable"><div class="mainContent" id="div5"></div></div></td>
+  </tr>
+
+  <tr>
+    <td><div class="draggable"><div class="mainContent" id="div6"></div></div></td>
+    <td><div class="draggable"><div class="mainContent" id="div7"></div></div></td>
+    <td><div class="draggable"><div class="mainContent" id="div8"></div></div></td>
+    <td><div class="draggable"><div class="mainContent" id="div9"></div></div></td>
+    <td><div class="draggable"><div class="mainContent" id="div10"></div></div></td>
+    <td><div class="draggable"><div class="mainContent" id="div11"></div></div></td>
+  </tr>
+
+</table>
+
+  <table id="quilt">
+  
+  <tr>
+    <td class="droppable"><div class="draggable"></div></td>
+    <td class="droppable"><div class="draggable"></div></td>
+    <td class="droppable"><div class="draggable"></div></td>
+    <td class="droppable"><div class="draggable"></div></td>
+    <td class="droppable"><div class="draggable"></div></td>
+    <td class="droppable"><div class="draggable"></div></td>
+  </tr>
+
+  <tr>
+    <td class="droppable"><div class="draggable"></div></td>
+    <td class="droppable"><div class="draggable"></div></td>
+    <td class="droppable"><div class="draggable"></div></td>
+    <td class="droppable"><div class="draggable"></div></td>
+    <td class="droppable"><div class="draggable"></div></td>
+    <td class="droppable"><div class="draggable"></div></td>
+  </tr>
+
+  <tr>
+    <td class="droppable"><div class="draggable"></div></td>
+    <td class="droppable"><div class="draggable"></div></td>
+    <td class="droppable"><div class="draggable"></div></td>
+    <td class="droppable"><div class="draggable"></div></td>
+    <td class="droppable"><div class="draggable"></div></td>
+    <td class="droppable"><div class="draggable"></div></td>
+  </tr>
+
+  <tr>
+    <td class="droppable"><div class="draggable"></div></td>
+    <td class="droppable"><div class="draggable"></div></td>
+    <td class="droppable"><div class="draggable"></div></td>
+    <td class="droppable"><div class="draggable"></div></td>
+    <td class="droppable"><div class="draggable"></div></td>
+    <td class="droppable"><div class="draggable"></div></td>
+  </tr>
+
+</table>
+
+</section>
+
+</div>
+
+  <script src="assets/main.js"></script>
+
+  </body>
+
+</html>
+
+  <!--<p>7. What's your favorite season?</p>
+    <div class="slidecontainer">
+      <div class = "seasons" id="favorite-season">
+      <input type="checkbox" id="spring" value="1">
+      <label for="spring">Spring</label>
+      <input type="checkbox" id="summer" value="2">
+      <label for="summer">Summer</label>
+      <input type="checkbox" id="fall" value="3">
+      <label for="fall">Fall</label>
+      <input type="checkbox" id="winter" value="4">
+      <label for="winter">Winter</label>
+    </div>
+  </div> -->
