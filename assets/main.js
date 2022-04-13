@@ -1,9 +1,20 @@
-$("#palette, #quilt, #instructions, .savequilt, .arrow-submit").css("display", "none");
+$("#palette, #quilt, #instructions, .arrow-submit").css("display", "none");
 
 function saveData() {
 
 //homes
-let imageSetOne = ["https://i.imgur.com/Of69Ter.png"];
+let imageSetOne = ["https://i.imgur.com/Of69Ter.png",
+"https://i.imgur.com/UOoQZUl.png",
+"https://i.imgur.com/XYruZta.png",
+"https://i.imgur.com/zNKgpDZ.png",
+"https://i.imgur.com/Jv6uMo6.png",
+"https://i.imgur.com/ExpdIH7.png",
+"https://i.imgur.com/s1TEkuW.png",
+"https://i.imgur.com/0KrqU4D.png",
+"https://i.imgur.com/ExpdIH7.png",
+"https://i.imgur.com/Jv6uMo6.png",
+"https://i.imgur.com/lIcBEum.png",
+"https://i.imgur.com/veRh1EP.png"];
 
 //places
 let imageSetTwo = ["https://i.imgur.com/Of69Ter.png",
@@ -13,10 +24,25 @@ let imageSetTwo = ["https://i.imgur.com/Of69Ter.png",
 "https://i.imgur.com/aHrSJL2.png",
 "https://i.imgur.com/oZ3kCWm.png",
 "https://i.imgur.com/rKfxIta.png",
-"https://i.imgur.com/TUpXH9t.png"];
+"https://i.imgur.com/TUpXH9t.png",
+"https://i.imgur.com/s1TEkuW.png",
+"https://i.imgur.com/0KrqU4D.png",
+"https://i.imgur.com/lIcBEum.png",
+"https://i.imgur.com/veRh1EP.png"];
 
 //keepsakes
-let imageSetFour = ["https://i.imgur.com/Of69Ter.png"];
+let imageSetFour = ["https://i.imgur.com/Of69Ter.png",
+"https://i.imgur.com/mqLTf82.png",
+"https://i.imgur.com/5f1v5kV.png",
+"https://i.imgur.com/OQqeKex.png",
+"https://i.imgur.com/BighHvn.png",
+"https://i.imgur.com/UgtsHAY.png",
+"https://i.imgur.com/FzLXxov.png",
+"https://i.imgur.com/FzLXxov.png", 
+"https://i.imgur.com/x5AYemZ.png",
+"https://i.imgur.com/vzAJ6vb.png",
+"https://i.imgur.com/UgtsHAY.png",
+"https://i.imgur.com/BighHvn.png"];
 
 //dreams
 let imageSetFive = ["https://i.imgur.com/sfj2tQV.png",
@@ -27,7 +53,16 @@ let imageSetFive = ["https://i.imgur.com/sfj2tQV.png",
 "https://i.imgur.com/ltSY3su.png",
 "https://i.imgur.com/TZE7CzN.png",
 "https://i.imgur.com/zqpVBmu.png",
-"https://i.imgur.com/KjAmjCw.png"];
+"https://i.imgur.com/KjAmjCw.png",
+"https://i.imgur.com/ltSY3su.png",
+"https://i.imgur.com/130IOBa.png",
+"https://i.imgur.com/ltSY3su.png",
+"https://i.imgur.com/sfj2tQV.png",
+"https://i.imgur.com/dLS59Kg.png",
+"https://i.imgur.com/iQLaGye.png",
+"https://i.imgur.com/dZrWUi4.png",
+"https://i.imgur.com/130IOBa.png",
+"https://i.imgur.com/ltSY3su.png"];
 
 //faith
 let imageSetSix = ["https://i.imgur.com/pmxwKQr.png",
@@ -39,12 +74,30 @@ let imageSetSix = ["https://i.imgur.com/pmxwKQr.png",
 "https://i.imgur.com/veRh1EP.png",
 "https://i.imgur.com/lIcBEum.png",
 "https://i.imgur.com/YbnCF82.png",
-"https://i.imgur.com/lbTZsCs.png"];
+"https://i.imgur.com/lbTZsCs.png",
+"https://i.imgur.com/JtGav7u.png",
+"https://i.imgur.com/UzIVthr.png",
+"https://i.imgur.com/pmxwKQr.png",
+"https://i.imgur.com/idHhHHx.png",
+"https://i.imgur.com/yya4wE4.png",
+"https://i.imgur.com/GLiO8Y4.png",
+"https://i.imgur.com/dtjt6TC.png"];
 
 //food
 let imageSetEight = ["https://i.imgur.com/mlYRa6Z.png",
 "https://i.imgur.com/5cl4RPa.png",
-"https://i.imgur.com/PmMFa4S.png"];
+"https://i.imgur.com/PmMFa4S.png",
+"https://i.imgur.com/z655O4R.png",
+"https://i.imgur.com/zUQlRPs.png",
+"https://i.imgur.com/msMzf1v.png",
+"https://i.imgur.com/zNKgpDZ.png",
+"https://i.imgur.com/UOoQZUl.png",
+"https://i.imgur.com/XYruZta.png",
+"https://i.imgur.com/mlYRa6Z.png",
+"https://i.imgur.com/5cl4RPa.png",
+"https://i.imgur.com/PmMFa4S.png",
+"https://i.imgur.com/z655O4R.png",
+"https://i.imgur.com/zUQlRPs.png"];
 
 //community
 let imageSetNine = ["https://i.imgur.com/FzLXxov.png", 
@@ -52,16 +105,63 @@ let imageSetNine = ["https://i.imgur.com/FzLXxov.png",
 "https://i.imgur.com/vzAJ6vb.png",
 "https://i.imgur.com/UgtsHAY.png",
 "https://i.imgur.com/BighHvn.png",
-"https://i.imgur.com/OQqeKex.png"];
+"https://i.imgur.com/OQqeKex.png",
+"https://i.imgur.com/zNKgpDZ.png",
+"https://i.imgur.com/UOoQZUl.png",
+"https://i.imgur.com/XYruZta.png",
+"https://i.imgur.com/UgtsHAY.png",
+"https://i.imgur.com/BighHvn.png",
+"https://i.imgur.com/OQqeKex.png",
+"https://i.imgur.com/FzLXxov.png"];
 
 //language
-let imageSetTen = ["https://i.imgur.com/Of69Ter.png"];
+let imageSetTen = ["https://i.imgur.com/Of69Ter.png",
+"https://i.imgur.com/teAVRzQ.png",
+"https://i.imgur.com/Nbr2qwA.png",
+"https://i.imgur.com/TmL4GrH.png",
+"https://i.imgur.com/zNKgpDZ.png",
+"https://i.imgur.com/UOoQZUl.png",
+"https://i.imgur.com/XYruZta.png",
+"https://i.imgur.com/s1TEkuW.png",
+"https://i.imgur.com/0KrqU4D.png",
+"https://i.imgur.com/JtGav7u.png",
+"https://i.imgur.com/UzIVthr.png",
+"https://i.imgur.com/Of69Ter.png",
+"https://i.imgur.com/teAVRzQ.png",
+"https://i.imgur.com/Nbr2qwA.png"];
 
 //sports
-let imageSetEleven = ["https://i.imgur.com/Of69Ter.png"];
+let imageSetEleven = ["https://i.imgur.com/Of69Ter.png",
+"https://i.imgur.com/rdkpsia.png",
+"https://i.imgur.com/nxxWuN5.png",
+"https://i.imgur.com/zNKgpDZ.png",
+"https://i.imgur.com/UOoQZUl.png",
+"https://i.imgur.com/XYruZta.png",
+"https://i.imgur.com/OQqeKex.png",
+"https://i.imgur.com/BighHvn.png",
+"https://i.imgur.com/UzIVthr.png",
+"https://i.imgur.com/JtGav7u.png",
+"https://i.imgur.com/Of69Ter.png",
+"https://i.imgur.com/rdkpsia.png",
+"https://i.imgur.com/nxxWuN5.png",
+"https://i.imgur.com/zNKgpDZ.png"];
 
 //music
-let imageSetTwelve = ["https://i.imgur.com/Of69Ter.png"];
+let imageSetTwelve = ["https://i.imgur.com/lYPlnr4.png",
+"https://i.imgur.com/SrGFzL8.png",
+"https://i.imgur.com/teAVRzQ.png",
+"https://i.imgur.com/Nbr2qwA.png",
+"https://i.imgur.com/TmL4GrH.png",
+"https://i.imgur.com/zNKgpDZ.png",
+"https://i.imgur.com/UOoQZUl.png",
+"https://i.imgur.com/XYruZta.png",
+"https://i.imgur.com/s1TEkuW.png",
+"https://i.imgur.com/lYPlnr4.png",
+"https://i.imgur.com/SrGFzL8.png",
+"https://i.imgur.com/XYruZta.png",
+"https://i.imgur.com/UgtsHAY.png",
+"https://i.imgur.com/BighHvn.png",
+"https://i.imgur.com/OQqeKex.png"];
 
 let imageSets = [imageSetOne, imageSetTwo, imageSetFour, imageSetFive, imageSetSix, imageSetEight, imageSetNine, imageSetTen, imageSetEleven, imageSetTwelve];
 
@@ -128,7 +228,7 @@ let imageSets = [imageSetOne, imageSetTwo, imageSetFour, imageSetFive, imageSetS
   }
 
   $("#palette, #quilt").css("display", "table");
-  $("#instructions, .savequilt, .arrow-submit").css("display", "block");
+  $("#instructions, .arrow-submit").css("display", "block");
 
 }
 
